@@ -20,4 +20,4 @@ for r in records:
         errors += '"{}" ; "{}"\n'.format(r[0], r[1])
 
 writecsv(output, 'resources/OSM/extract-osm.csv')
-writecsv(output, 'resources/OSM/extract-osm-missing-wikipedia-articles.csv')
+writecsv(errors, 'resources/OSM/extract-osm-missing-wikipedia-articles.csv')
