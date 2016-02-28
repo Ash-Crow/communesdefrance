@@ -17,7 +17,7 @@ errors = ""
 for r in records:
     output += '"{}" ; "{}" ; "{}"\n'.format(r[0], r[1], r[2])
     if r[2].strip == '':
-        output += '"{}" ; "{}"\n'.format(r[0], r[1])
+        errors += '"{}" ; "{}"\n'.format(r[0], r[1])
 
 writecsv(output, 'resources/OSM/extract-osm.csv')
 writecsv(output, 'resources/OSM/extract-osm-missing-wikipedia-articles.csv')
