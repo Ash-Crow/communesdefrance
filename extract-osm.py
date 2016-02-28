@@ -3,10 +3,6 @@ import shapefile        # Shapefile manipulations
 
 sf = shapefile.Reader("resources/OSM/communes-20160119.shp")
 
-fields = sf.fields
-
-#print(fields)
-
 records = sf.records()
 records = sorted(records)
 
