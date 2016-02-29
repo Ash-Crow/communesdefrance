@@ -12,11 +12,10 @@ def writecsv(text, file):
             f.write(text)
             f.close()
 
-output = ""
-errors = ""
+output = errors = ""
 for r in records:
     output += '"{}" ; "{}" ; "{}"\n'.format(r[0], r[1], r[2])
-    if r[2].strip == '':
+    if r[2].strip() == '':
         errors += '"{}" ; "{}"\n'.format(r[0], r[1])
 
 writecsv(output, 'resources/OSM/extract-osm.csv')
